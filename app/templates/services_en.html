@@ -1,0 +1,40 @@
+{% extends 'layout_en.html' %}
+
+{% block title %}Services{% endblock %}
+
+{% block description %}We provide many services to boost your project in French speaking countries or with French people.{% endblock %}
+
+{% block url_cn %}{{ url_for("services_cn") }}{% endblock %}
+{% block url_fr %}{{ url_for("services_fr") }}{% endblock %}
+
+{% block main %}
+<main>
+	<div class='service-card'>
+		<div class='card-header'>
+			<a class='previous-card' href='{{ url_for("translation_en") }}'>&lt;</a>
+			<h2>Services</h2>
+			<a class='next-card' href='{{ url_for("blog_en")}}'>&gt;</a>
+		</div>
+		<div class='card-body'>
+			<p>Whether you need to go to a French speaking country, or just to communicate in French, we certainly can help you:</p>
+			<h3>Studies abroad</h3>
+			<ul>
+				<li>School searching</li>
+				<li>School registration</li>
+			</ul>
+			<h3>Organization of your stay</h3>
+			<ul>
+				<li>Accomodation searching</li>
+				<li>Assistance</li>
+				<li>Consulting</li>
+			</ul>
+			<h3>Others</h3>
+			<ul>
+				<li>Interpreting</li>
+				<li>Information service</li>
+				<li>Educational content</li>
+			</ul>
+		</div>
+	</div>
+</main>
+{% endblock %}

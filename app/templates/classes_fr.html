@@ -1,0 +1,47 @@
+{% extends 'layout_fr.html' %}
+
+{% block title %}Cours en ligne{% endblock %}
+
+{% block description %}Notre professeur français vous enseignera en anglais, chinois ou français.{% endblock %}
+
+{% block url_cn %}{{ url_for("classes_cn") }}{% endblock %}
+{% block url_en %}{{ url_for("classes_en") }}{% endblock %}
+
+{% block main %}
+<main>
+	<div class='service-card'>
+		<div class='card-header'>
+			<a class='previous-card' href='#'></a>
+			<h2>Cours en ligne</h2>
+			<a class='next-card' href='{{ url_for("translation_fr") }}'>&gt;</a>
+		</div>
+		<div class='card-body'>
+			<p>Avec plus de 3000 heures de cours depuis 2012, notre professeur français vous écoute pour mettre au point le programme qui vous correspond, quel que soit votre profil :</p>
+			<h3>Langue d'enseignement</h3>
+			<ul>
+				<li>Chinois</li>
+				<li>Anglais</li>
+				<li>Français</li>
+			</ul>
+			<h3>Niveau</h3>
+			<ul>
+				<li>Débutant complet</li>
+				<li>A1 à C2</li>
+			</ul>
+			<h3>Objectif</h3>
+			<ul>
+				<li>Bases de la communication</li>
+				<li>Maîtrise de la langue</li>
+				<li>Pratique de l'oral</li>
+				<li>Préparation d'examen ou d'entretien</li>
+			</ul>
+			<h3>Disponibilité</h3>
+			<ul>
+				<li>Soutien occasionnel</li>
+				<li>Cours réguliers</li>
+				<li>Entraînement intensif</li>
+			</ul>
+		</div>
+	</div>
+</main>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'layout_en.html' %}
+
+{% block title %}Translation{% endblock %}
+
+{% block description %}Our Franco-Chinese team will translate your documents into French or Chinese.{% endblock %}
+
+{% block url_cn %}{{ url_for("translation_cn") }}{% endblock %}
+{% block url_fr %}{{ url_for("translation_fr") }}{% endblock %}
+
+{% block main %}
+<main class='company'>
+	<div class='service-card'>
+		<div class='card-header'>
+			<a class='previous-card' href='{{ url_for("classes_en") }}'>&lt;</a>
+			<h2>Translation</h2>
+			<a class='next-card' href='{{ url_for("services_en") }}'>&gt;</a>
+		</div>
+		<div class='card-body'>
+			<p>Our translators, Chinese and French, respectively spent several years in France and China, and use both languages daily.</p>
+			<p class='light'>Especially, our team leader, arrived in France in 2009, translated François Levaillant's <em><a class='underline' href='http://gallica.bnf.fr/ark:/12148/bpt6k99291p'>Histoire naturelle</a></em> (1799).</p>
+			<p>Together, they will translate documents for you such as:</p>
+			<h3>Official documents</h3>
+			<ul>
+				<li>Academic certificates</li>
+				<li>Deeds of assignment</li>
+				<li>Joint-venture agreements</li>
+			</ul>
+			<h3>Subtitles</h3>
+			<ul>
+				<li>Translation and/or production</li>
+				<li>Into Chinese or French</li>
+				<li>Translation possible from English</li>
+			</ul>
+			<h3>Others</h3>
+			<ul>
+				<li>Complete publications</li>
+				<li>Various articles</li>
+			</ul>
+		</div>
+	</div>
+</main>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'layout_cn.html' %}
+
+{% block title %}首页{% endblock %}
+
+{% block description %}我们提供在线法语课程以及中法互译服务，帮助你达成目标。{% endblock %}
+
+{% block url_en %}{{ url_for("home_en") }}{% endblock %}
+{% block url_fr %}{{ url_for("home_fr") }}{% endblock %}
+
+{% block main %}
+<main class='home'>
+	<section class='catchline'>
+		<p>跟我们讲讲你的计划</p>
+	</section>
+	<nav class='main-pages'>
+		<a href='{{ url_for("classes_cn") }}'>
+			<img src='{{ url_for("static",filename="classes.jpeg") }}' alt='在线课程'>
+			<h2>在线课程</h2>
+			<p>超过3000小时的授课经验，独家教学内容，量身定制专属课程</p>
+		</a>
+		<a href='{{ url_for("translation_cn") }}'>
+			<img src='{{ url_for("static",filename="translation.jpeg") }}' alt='翻译'>
+			<h2>翻译</h2>
+			<p>我们的中法翻译团队可以处理你的文件、字幕及不同类型的文字内容</p>
+		</a>
+		<a href='{{ url_for("services_cn") }}'>
+			<img src='{{ url_for("static",filename="services.jpeg") }}' alt='服务'>
+			<h2>其他服务</h2>
+			<p>有更特别的任务委托我们？我们准备好了！</p>
+		</a>
+		<a href='{{ url_for("blog_cn") }}'>
+			<img src='{{ url_for("static",filename="blog.jpeg") }}' alt='博客'>
+			<h2>博客</h2>
+			<p>在这里你能找到更多内容: 法国文化,课程补充,涉及法国以及法语的多样信息......</p>
+		</a>
+	</nav>
+</main>
+{% endblock %}

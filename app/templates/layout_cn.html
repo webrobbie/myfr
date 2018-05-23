@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>{% block title %}{% endblock %} - My French Online</title>
+		<meta name='keywords' content='French Chinese translation classes online'>
+		<meta name='description' content='{% block description %}{% endblock %}'>
+		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<link rel='shortcut icon' href='{{ url_for("static",filename="favicon.ico") }}' type='image/x-icon'>
+		<link href='http://cdn.webfont.youziku.com/webfonts/nomal/115840/46865/5b05c218f629d8160c5b7885.css' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' href='{{ url_for("static",filename="compiled.css") }}'>
+	</head>
+	<body class='chinese'>
+
+		<header>
+			<nav class='root'>
+				<a class='title' href='{{ url_for("home_cn") }}'><h1>My French Online</h1></a>
+				<section class='languages'>
+					<a href='{% block url_en %}{% endblock %}'>
+						<span>English</span>
+						<img src='{{ url_for("static",filename="en.svg") }}' alt='英国国旗'>
+					</a>
+					<a href='{% block url_fr %}{% endblock %}'>
+						<span>Français</span>
+						<img src='{{ url_for("static",filename="fr.svg") }}' alt='法国国旗'>
+					</a>
+				</section>
+			</nav>
+			{% block optional_nav %}{% endblock %}
+		</header>
+
+		{% block nav %}{% endblock %}
+
+		{% block main %}{% endblock %}
+
+		<footer>
+			<address>
+				<p><img src='{{ url_for("static",filename="mail.svg") }}' alt='电子邮件'>contact@myfrench.online</p>
+				<p><img src='{{ url_for("static",filename="skype.svg") }}' alt='Skype'>My French Online</p>
+				<p><img src='{{ url_for("static",filename="weixin.svg") }}' alt='微信'>2584882119</p>
+				<p><img src='{{ url_for("static",filename="qq.svg") }}' alt='QQ'>2584882119</p>
+			</address>
+			<div class='legal'>
+				<p>&copy; 2018 My French Online - SIREN 838 644 904</p>
+			</div>
+		</footer>
+
+	</body>
+</html>

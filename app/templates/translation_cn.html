@@ -1,0 +1,42 @@
+{% extends 'layout_cn.html' %}
+
+{% block title %}翻译{% endblock %}
+
+{% block description %}我们的中法双母语团队能够将你的文件译成中文或法语。{% endblock %}
+
+{% block url_en %}{{ url_for("translation_en") }}{% endblock %}
+{% block url_fr %}{{ url_for("translation_fr") }}{% endblock %}
+
+{% block main %}
+<main class='company'>
+	<div class='service-card'>
+		<div class='card-header'>
+			<a class='previous-card' href='{{ url_for("classes_cn") }}'>&lt;</a>
+			<h2>翻译</h2>
+			<a class='next-card' href='{{ url_for("services_cn") }}'>&gt;</a>
+		</div>
+		<div class='card-body'>
+			<p>我们的中文及法语译者在中国和法国均有数年的工作生活经验，中文和法语作为日常用语被高频使用。</p>
+			<p class='light'>我们的团队领头人2009年起在法国生活，译著有18世纪末法国自然学家François Levaillant的<em><a class='underline' href='http://gallica.bnf.fr/ark:/12148/bpt6k99291p'>《非洲鸟类史》</a></em>。</p>
+			<p>我们的工作内容：</p>
+			<h3>官方文件</h3>
+			<ul>
+				<li>学历文凭</li>
+				<li>股份转让合同</li>
+				<li>合资企业合同等</li>
+			</ul>
+			<h3>字幕</h3>
+			<ul>
+				<li>翻译制作字幕</li>
+				<li>中法双语字幕</li>
+				<li>可将英文转译为中文或法语字幕</li>
+			</ul>
+			<h3>其他</h3>
+			<ul>
+				<li>各种内容的成书</li>
+				<li>不同类型的文章</li>
+			</ul>
+		</div>
+	</div>
+</main>
+{% endblock %}

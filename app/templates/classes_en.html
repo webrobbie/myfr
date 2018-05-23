@@ -1,0 +1,47 @@
+{% extends 'layout_en.html' %}
+
+{% block title %}Classes{% endblock %}
+
+{% block description %}Our native French teacher will teach you in French, Chinese and/or English.{% endblock %}
+
+{% block url_cn %}{{ url_for("classes_cn") }}{% endblock %}
+{% block url_fr %}{{ url_for("classes_fr") }}{% endblock %}
+
+{% block main %}
+<main>
+	<div class='service-card'>
+		<div class='card-header'>
+			<a class='previous-card' href='#'></a>
+			<h2>Online classes</h2>
+			<a class='next-card' href='{{ url_for("translation_en") }}'>&gt;</a>
+		</div>
+		<div class='card-body'>
+			<p>With more than 3000 class hours since 2013, our native French teacher is waiting for you to create the program that fits you the best, whatever your profile might be:</p>
+			<h3>Teaching language</h3>
+			<ul>
+				<li>English</li>
+				<li>French</li>
+				<li>Chinese</li>
+			</ul>
+			<h3>Proficiency</h3>
+			<ul>
+				<li>Complete beginner</li>
+				<li>A1 to C2</li>
+			</ul>
+			<h3>Goal</h3>
+			<ul>
+				<li>Communication basics</li>
+				<li>Mastery of the language</li>
+				<li>Oral communication practice</li>
+				<li>Exam or interview preparation</li>
+			</ul>
+			<h3>Availability</h3>
+			<ul>
+				<li>Occasional support</li>
+				<li>Regular lessons</li>
+				<li>Intensive training</li>
+			</ul>
+		</div>
+	</div>
+</main>
+{% endblock %}

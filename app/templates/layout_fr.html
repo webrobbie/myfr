@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>{% block title %}{% endblock %} - My French Online</title>
+<meta name='keywords' content='French Chinese online classes translation'>
+<meta name='description' content='{% block description %}{% endblock %}'>
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<link rel='shortcut icon' href='{{ url_for("static",filename="favicon.ico") }}' type='image/x-icon'>
+<link rel='stylesheet' href='{{ url_for("static",filename="compiled.css") }}'>
+</head>
+<body>
+
+	<header>
+		<nav class='root'>
+			<a class='title' href='{{ url_for("home_fr") }}'>
+				<h1>My French Online</h1>
+			</a>
+			<section class='languages'>
+				<a href='{% block url_cn %}{% endblock %}'>
+					<span>中文</span>
+					<img src='{{ url_for("static",filename="cn.svg") }}' alt='Drapeau chinois'>
+				</a>
+				<a href='{% block url_en %}{% endblock %}'>
+					<span>English</span>
+					<img src='{{ url_for("static",filename="en.svg") }}' alt='Drapeau anglais'>
+				</a>
+			</section>
+		</nav>
+		{% block optional_nav %}{% endblock %}
+	</header>
+
+	{% block main %}{% endblock %}
+
+	<footer>
+		<address>
+			<p><img src='{{ url_for("static",filename="mail.svg") }}' alt='E-mail'>contact@myfrench.online</p>
+			<p><img src='{{ url_for("static",filename="skype.svg") }}' alt='Skype'>My French Online</p>
+			<p><img src='{{ url_for("static",filename="weixin.svg") }}' alt='WeChat'>2584882119</p>
+			<p><img src='{{ url_for("static",filename="qq.svg") }}' alt='QQ'>2584882119</p>
+		</address>
+		<section class='legal'>
+			<p>&copy; 2018 My French Online - SIREN 838 644 904</p>
+		</section>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'layout_cn.html' %}
+{% block title %}博客{% endblock %}
+{% block description %}我们的一些文章关于法国和法语。{% endblock %}
+{% block url_en %}{{ url_for("blog_en") }}{% endblock %}
+{% block url_fr %}{{ url_for("blog_fr") }}{% endblock %}
+{% block optional_nav %}{% include 'blog/nav_cn.html' %}{% endblock %}
+
+{% block main %}
+<main class='blog'>
+	<div class='blog-card'>
+		<article class='card-body'>
+			<p class='center'>页面建设中. 请耐心等待,谢谢!</p>
+		</article>
+	</div>
+</main>
+{% endblock %}

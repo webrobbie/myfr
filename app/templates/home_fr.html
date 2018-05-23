@@ -1,0 +1,38 @@
+{% extends 'layout_fr.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block description %}Nous enseignons le français en ligne, traduisons le français et le chinois, et vous assistons dans vos projets.{% endblock %}
+
+{% block url_cn %}{{ url_for("home_cn") }}{% endblock %}
+{% block url_en %}{{ url_for("home_en") }}{% endblock %}
+
+{% block main %}
+<main class='home'>
+	<section class='catchline'>
+		<p>Parlez-nous de vos projets</p>
+	</section>
+	<nav class='main-pages'>
+		<a href='{{ url_for("classes_fr") }}'>
+			<img src='{{ url_for("static",filename="classes.jpeg") }}' alt='Cours de français en ligne'>
+			<h2>Cours en ligne</h2>
+			<p>Plus de 3000 heures d'expérience, du contenu exclusif, et des cours sur mesure.</p>
+		</a>
+		<a href='{{ url_for("translation_fr") }}'>
+			<img src='{{ url_for("static",filename="translation.jpeg") }}' alt='Traduction'>
+			<h2>Traduction</h2>
+			<p>Notre équipe franco-chinoise s'occupe de vos documents officiels, sous-titres, et textes divers.</p>
+		</a>
+		<a href='{{ url_for("services_fr") }}'>
+			<img src='{{ url_for("static",filename="services.jpeg") }}' alt='Services liés au français'>
+			<h2>Services</h2>
+			<p>Une tâche plus particulière à nous confier ? Nous sommes à votre écoute.</p>
+		</a>
+		<a href='{{ url_for("blog_fr") }}'>
+			<img src='{{ url_for("static",filename="blog.jpeg") }}' alt='Notre blog sur la France et le français'>
+			<h2>Blog</h2>
+			<p>Ici, un peu de tout : culture, ressources pédagogiques, divertissement...</p>
+		</a>
+	</nav>
+</main>
+{% endblock %}

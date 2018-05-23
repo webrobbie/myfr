@@ -1,0 +1,40 @@
+{% extends 'layout_fr.html' %}
+
+{% block title %}Services{% endblock %}
+
+{% block description %}Nous vous proposons de nombreux services pour vous assister dans vos projets avec les français ou en pays francophones.{% endblock %}
+
+{% block url_cn %}{{ url_for("services_cn") }}{% endblock %}
+{% block url_en %}{{ url_for("services_en") }}{% endblock %}
+
+{% block main %}
+<main>
+	<div class='service-card'>
+		<div class='card-header'>
+			<a class='previous-card' href='{{ url_for("translation_fr") }}'>&lt;</a>
+			<h2>Services</h2>
+			<a class='next-card' href='{{ url_for("blog_fr") }}'>&gt;</a>
+		</div>
+		<div class='card-body'>
+			<p>Que vous ayez besoin de vous rendre dans un pays francophone, ou simplement de communiquer en français, nous pouvons certainement vous aider :</p>
+			<h3>Études en France</h3>
+			<ul>
+				<li>Recherche d'université</li>
+				<li>Aide à l'inscription</li>
+			</ul>
+			<h3>Séjour</h3>
+			<ul>
+				<li>Recherche de logement</li>
+				<li>Assistance</li>
+				<li>Conseil</li>
+			</ul>
+			<h3>Divers</h3>
+			<ul>
+				<li>Interprétariat</li>
+				<li>Renseignement</li>
+				<li>Ressources pédagogiques</li>
+			</ul>
+		</div>
+	</div>
+</main>
+{% endblock %}

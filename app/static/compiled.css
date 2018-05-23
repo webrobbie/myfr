@@ -1,0 +1,516 @@
+@charset "UTF-8";
+@font-face {
+  font-family: sofia;
+  src: url(SofiaRegular.otf);
+}
+@font-face {
+  font-family: geo;
+  src: url(GeosansLight.ttf);
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
+
+.central-column, footer address, main, header nav.blog .center, header nav.root {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1024px;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: url(eiffel1920.jpg) no-repeat top left fixed;
+  display: flex;
+  flex-direction: column;
+  font-family: geo, sans-serif;
+}
+body.chinese * {
+  font-family: "Source-Han-Ligh1233a777081c480", geo, sans-serif;
+}
+@media (orientation: landscape) and (min-width: 1921px) {
+  body {
+    background-size: cover;
+  }
+}
+
+header {
+  background: #8282f0;
+}
+header nav.root {
+  padding: 1vw 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.root {
+    padding: 0;
+  }
+}
+header nav.root a.title {
+  transition: 0.2s;
+}
+header nav.root a.title:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+header nav.root a.title h1 {
+  padding-bottom: 0.2em;
+  font-size: 7vw;
+  font-weight: normal;
+  font-family: sofia, sans-serif;
+  color: white;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.root a.title h1 {
+    font-size: 32px;
+  }
+}
+header nav.root section.languages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.root section.languages {
+    flex-direction: row;
+  }
+}
+header nav.root section.languages a {
+  margin: 0.5em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.2s;
+}
+header nav.root section.languages a:last-child {
+  margin-left: 2em;
+}
+header nav.root section.languages a:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+header nav.root section.languages a span {
+  font-size: 3vw;
+  font-weight: bold;
+  color: white;
+  opacity: 0.7;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.root section.languages a span {
+    font-weight: normal;
+    font-size: 1.4em;
+  }
+}
+header nav.root section.languages a img {
+  height: 4vw;
+  margin-left: 1vw;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.root section.languages a img {
+    height: 30px;
+    margin-left: 8px;
+  }
+}
+header nav.blog {
+  background: #fa6464;
+}
+header nav.blog .center {
+  padding: 0 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.blog .center {
+    padding: 0;
+  }
+}
+header nav.blog .center .primary-menu {
+  display: flex;
+  flex-direction: row;
+}
+header nav.blog .center .primary-menu li {
+  list-style: none;
+}
+header nav.blog .center .primary-menu li a {
+  margin-right: 2vw;
+  padding: 2vw 4vw;
+  display: inline-block;
+  color: white;
+  font-size: 4.5vw;
+  transition: 0.2s;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.blog .center .primary-menu li a {
+    margin-left: 0;
+    margin-right: 8px;
+    padding: 8px 16px 8px 0;
+    font-size: 1.4em;
+    font-weight: normal;
+  }
+}
+header nav.blog .center .primary-menu li a:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+header nav.blog .center .blog-home {
+  padding-bottom: 6px;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.blog .center .blog-home {
+    padding-right: 0;
+  }
+}
+header nav.blog .center .blog-home:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+header nav.blog .center .blog-home h2 {
+  font-size: 5vw;
+  font-family: sofia, sans-serif;
+  font-weight: normal;
+  color: white;
+  transition: 0.2s;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  header nav.blog .center .blog-home h2 {
+    font-size: 1.8em;
+  }
+}
+
+main {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+main.home {
+  justify-content: space-evenly;
+}
+main section.catchline {
+  padding: 12vw 0;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main section.catchline {
+    height: 100px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+main section.catchline p {
+  text-align: right;
+  width: 100%;
+  font-size: 6vw;
+  color: #8282f0;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main section.catchline p {
+    font-size: 30px;
+  }
+}
+main nav.main-pages {
+  display: flex;
+  flex-direction: column;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main nav.main-pages {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+main nav.main-pages a {
+  background: white;
+  margin-bottom: 8vw;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
+  display: block;
+  opacity: 1;
+  transition: 0.2s;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main nav.main-pages a {
+    width: 23%;
+    margin-bottom: 0;
+  }
+}
+main nav.main-pages a:hover {
+  opacity: 0.9;
+  transition: 0.2s;
+  box-shadow: 0 11px 11px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+}
+main nav.main-pages a:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+}
+main nav.main-pages a h2 {
+  padding: 2vw;
+  background: #fa6464;
+  text-align: center;
+  font-size: 5.5vw;
+  font-weight: normal;
+  color: white;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main nav.main-pages a h2 {
+    padding: 10px;
+    font-size: 26px;
+  }
+}
+main nav.main-pages a img {
+  width: 100%;
+  vertical-align: middle;
+}
+main nav.main-pages a p {
+  padding: 6vw;
+  text-align: center;
+  font-size: 4.5vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main nav.main-pages a p {
+    padding: 24px;
+    font-size: 20px;
+  }
+}
+main .service-card {
+  margin: 6vw 0;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: white;
+  align-self: center;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card {
+    margin: 50px 0;
+    font-size: 1.8vw;
+  }
+}
+main .service-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fa6464;
+}
+main .service-card .card-header h2 {
+  padding: 2vw;
+  font-size: 5vw;
+  font-weight: normal;
+  color: white;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-header h2 {
+    padding: 0.5em;
+    font-size: 28px;
+  }
+}
+main .service-card .card-header .previous-card, main .service-card .card-header .next-card {
+  padding: 0 5vw;
+  font-size: 6.5vw;
+  font-weight: bold;
+  color: white;
+  transition: 0.2s;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-header .previous-card, main .service-card .card-header .next-card {
+    font-size: 32px;
+  }
+}
+main .service-card .card-header .previous-card:hover, main .service-card .card-header .next-card:hover {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+main .service-card .card-body {
+  margin: 0 auto;
+  padding: 5vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-body {
+    padding: 3vw 8vw;
+  }
+}
+main .service-card .card-body h3 {
+  margin: 8vw 0 4vw;
+  font-size: 4vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-body h3 {
+    margin: 3vw 0 1.5vw;
+    font-size: 20px;
+  }
+}
+main .service-card .card-body p, main .service-card .card-body ul {
+  font-size: 4vw;
+  padding: 0;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-body p, main .service-card .card-body ul {
+    font-size: 20px;
+  }
+}
+main .service-card .card-body p.light, main .service-card .card-body ul.light {
+  margin: 3vw;
+  font-size: 3.4vw;
+  color: #555;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-body p.light, main .service-card .card-body ul.light {
+    margin: 24px;
+    font-size: 16px;
+  }
+}
+main .service-card .card-body p .underline, main .service-card .card-body ul .underline {
+  text-decoration: underline;
+}
+main .service-card .card-body p li, main .service-card .card-body ul li {
+  list-style: none;
+}
+main .service-card .card-body p li::before, main .service-card .card-body ul li::before {
+  content: "▸ ";
+  font-size: 4vw;
+  vertical-align: middle;
+  color: #8282f0;
+  margin-right: 2vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-body p li::before, main .service-card .card-body ul li::before {
+    font-size: 20px;
+    margin-right: 1vw;
+  }
+}
+main .service-card .card-body .small {
+  margin: 5vw;
+  font-size: 3.8vw;
+  color: #555;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .service-card .card-body .small {
+    margin: 2vw;
+    font-size: 18px;
+  }
+}
+main .service-card .card-body .small a {
+  color: #555;
+}
+main .blog-card {
+  width: 100%;
+  height: 100%;
+  margin: 6vw;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: white;
+  align-self: center;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .blog-card {
+    margin: 50px;
+    font-size: 1.8vw;
+  }
+}
+main .blog-card .card-body {
+  margin: 0 auto;
+  padding: 5vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .blog-card .card-body {
+    padding: 3vw 8vw;
+  }
+}
+main .blog-card .card-body h3 {
+  margin: 8vw 0 4vw;
+  font-size: 4vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .blog-card .card-body h3 {
+    margin: 3vw 0 1.5vw;
+    font-size: 20px;
+  }
+}
+main .blog-card .card-body p {
+  font-size: 4vw;
+  padding: 0;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  main .blog-card .card-body p {
+    font-size: 20px;
+  }
+}
+main .blog-card .card-body p .center {
+  text-align: center;
+}
+
+footer {
+  background: #8282f0;
+  color: white;
+}
+footer address {
+  margin: 0.3em auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 4.5vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  footer address {
+    flex-direction: row;
+    font-size: 24px;
+  }
+}
+footer address p {
+  margin: 0.2em auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: normal;
+}
+footer address p:nth-child(n+3) {
+  font-size: 4.2vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  footer address p:nth-child(n+3) {
+    font-size: 20px;
+  }
+}
+footer address p img {
+  margin-right: 0.5em;
+  width: 1.2em;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  footer address p img {
+    width: 24px;
+  }
+}
+footer .legal {
+  margin: 0 auto;
+  width: 95%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  footer .legal {
+    max-width: 1024px;
+  }
+}
+footer .legal p {
+  font-size: 3.4vw;
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  footer .legal p {
+    font-size: 16px;
+  }
+}

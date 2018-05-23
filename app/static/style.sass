@@ -1,0 +1,369 @@
+//MISC{{{
+@mixin w1024
+    @media (orientation: landscape) and (min-width: 1024px)
+        @content
+@mixin w1921
+    @media (orientation: landscape) and (min-width: 1921px)
+        @content
+@font-face
+    font-family: sofia
+    src: url(SofiaRegular.otf)
+@font-face
+    font-family: geo
+    src: url(GeosansLight.ttf)
+$font1: sofia,sans-serif
+$font2: geo,sans-serif
+$chineseFont: 'Source-Han-Ligh1233a777081c480',geo,sans-serif
+$red: rgb(250,100,100)
+$blue: rgb(130,130,240)
+*
+    margin: 0
+    box-sizing: border-box
+a
+    color: black
+    text-decoration: none
+    outline: none
+.central-column
+    margin: 0 auto
+    width: 95%
+    max-width: 1024px
+html
+    min-height: 100%
+body
+    min-height: 100vh
+    background: url(eiffel1920.jpg) no-repeat top left fixed
+    display: flex
+    flex-direction: column
+    font-family: $font2
+    &.chinese *
+        font-family: $chineseFont
+    @include w1921
+        background-size: cover
+//}}}
+//HEADER{{{
+header
+    background: $blue
+    nav.root
+        @extend .central-column
+        padding: 1vw 2vw
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include w1024
+            padding: 0
+        a.title
+            transition: 0.2s
+            &:hover
+                opacity: 0.7
+                transition: 0.2s
+            h1
+                padding-bottom: 0.2em
+                font-size: 7vw
+                font-weight: normal
+                font-family: $font1
+                color: white
+                @include w1024
+                    font-size: 32px
+        section.languages
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: end
+            @include w1024
+                flex-direction: row
+            a
+                margin: 0.5em 0
+                display: flex
+                flex-direction: row
+                align-items: center
+                transition: 0.2s
+                &:last-child
+                    margin-left: 2em
+                &:hover
+                    opacity: 0.7
+                    transition: 0.2s
+                span
+                    font-size: 3vw
+                    font-weight: bold
+                    color: white
+                    opacity: 0.7
+                    @include w1024
+                        font-weight: normal
+                        font-size: 1.4em
+                        
+                img
+                    height: 4vw
+                    margin-left: 1vw
+                    border-radius: 100%
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.5)
+                    @include w1024
+                        height: 30px
+                        margin-left: 8px
+    nav.blog
+        background: $red
+        .center
+            @extend .central-column
+            padding: 0 2vw
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            @include w1024
+                padding: 0
+            .primary-menu
+                display: flex
+                flex-direction: row
+                li
+                    list-style: none
+                    a
+                        margin-right: 2vw
+                        padding: 2vw 4vw
+                        display: inline-block
+                        color: white
+                        font-size: 4.5vw
+                        transition: 0.2s
+                        @include w1024
+                            margin-left: 0
+                            margin-right: 8px
+                            padding: 8px 16px 8px 0
+                            font-size: 1.4em
+                            font-weight: normal
+                        &:hover
+                            opacity: 0.7
+                            transition: 0.2s
+            .blog-home
+                //padding-right: 2vw
+                padding-bottom: 6px
+                @include w1024
+                    padding-right: 0
+                &:hover
+                    opacity: 0.7
+                    transition: 0.2s
+                h2
+                    font-size: 5vw
+                    font-family: $font1
+                    font-weight: normal
+                    color: white
+                    transition: 0.2s
+                    @include w1024
+                        font-size: 1.8em
+//}}}
+//MAIN{{{
+main
+    @extend .central-column
+    flex: auto
+    display: flex
+    flex-direction: column
+    &.home
+        justify-content: space-evenly
+    section.catchline
+        padding: 12vw 0
+        @include w1024
+            height: 100px
+            padding: 0
+            display: flex
+            align-items: center
+        p
+            text-align: right
+            width: 100%
+            font-size: 6vw
+            color: $blue
+            @include w1024
+                font-size: 30px
+
+    nav.main-pages
+        display: flex
+        flex-direction: column
+        @include w1024
+            flex-direction: row
+            justify-content: space-between
+        a
+            background: white
+            margin-bottom: 8vw
+            box-shadow: 0 7px 7px rgba(0,0,0,0.5)
+            display: block
+            opacity: 1
+            transition: 0.2s
+            @include w1024
+                width: 23%
+                margin-bottom: 0
+            &:hover
+                opacity: 0.9
+                transition: 0.2s
+                box-shadow: 0 11px 11px rgba(0,0,0,0.5)
+                transform: translateY(-4px)
+            &:active
+                box-shadow: 0 1px 1px rgba(0,0,0,0.5)
+                transform: translateY(0)
+            h2
+                padding: 2vw
+                background: $red
+                text-align: center
+                font-size: 5.5vw
+                font-weight: normal
+                color: white
+                @include w1024
+                    padding: 10px
+                    font-size: 26px
+            img
+                width: 100%
+                vertical-align: middle
+            p
+                padding: 6vw
+                text-align: center
+                font-size: 4.5vw
+                @include w1024
+                    padding: 24px
+                    font-size: 20px
+    .service-card
+        margin: 6vw 0
+        width: 100%
+        box-shadow: 0 1px 1px rgba(0,0,0,0.5)
+        background: white
+        align-self: center
+        @include w1024
+            margin: 50px 0
+            font-size: 1.8vw
+        .card-header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            background: $red
+            h2
+                padding: 2vw
+                font-size: 5vw
+                font-weight: normal
+                color: white
+                @include w1024
+                    padding: 0.5em
+                    font-size: 28px
+            .previous-card,.next-card
+                padding: 0 5vw
+                font-size: 6.5vw
+                font-weight: bold
+                color: white
+                transition: 0.2s
+                @include w1024
+                    font-size: 32px
+                &:hover
+                    opacity: 0.5
+                    transition: 0.2s
+        .card-body
+            margin: 0 auto
+            padding: 5vw
+            @include w1024
+                padding: 3vw 8vw
+            h3
+                margin: 8vw 0 4vw
+                font-size: 4vw
+                //color: $blue
+                @include w1024
+                    margin: 3vw 0 1.5vw
+                    font-size: 20px
+            p,ul
+                font-size: 4vw
+                padding: 0
+                @include w1024
+                    font-size: 20px
+                &.light
+                    margin: 3vw
+                    font-size: 3.4vw
+                    color: #555
+                    @include w1024
+                        margin: 24px
+                        font-size: 16px
+                .underline
+                    text-decoration: underline
+                li
+                    list-style: none
+                    &::before
+                        content: '▸ '
+                        font-size: 4vw
+                        vertical-align: middle
+                        color: $blue
+                        margin-right: 2vw
+                        @include w1024
+                            font-size: 20px
+                            margin-right: 1vw
+            .small
+                margin: 5vw
+                font-size: 3.8vw
+                color: #555
+                @include w1024
+                    margin: 2vw
+                    font-size: 18px
+                a
+                    color: #555
+    .blog-card
+        width: 100%
+        height: 100%
+        margin: 6vw
+        box-shadow: 0 1px 1px rgba(0,0,0,0.5)
+        background: white
+        align-self: center
+        @include w1024
+            margin: 50px
+            font-size: 1.8vw
+        .card-body
+            margin: 0 auto
+            padding: 5vw
+            @include w1024
+                padding: 3vw 8vw
+            h3
+                margin: 8vw 0 4vw
+                font-size: 4vw
+                @include w1024
+                    margin: 3vw 0 1.5vw
+                    font-size: 20px
+            p
+                font-size: 4vw
+                padding: 0
+                @include w1024
+                    font-size: 20px
+                .center
+                    text-align: center
+//}}}
+//FOOTER{{{
+footer
+    background: $blue
+    color: white
+    address
+        @extend .central-column
+        margin: 0.3em auto
+        display: flex
+        flex-direction: column
+        font-size: 4.5vw
+        @include w1024
+            //max-width: 1024px
+            flex-direction: row
+            font-size: 24px
+        p
+            margin: 0.2em auto
+            display: flex
+            flex-direction: row
+            align-items: center
+            font-style: normal
+            &:nth-child(n+3)
+                font-size: 4.2vw
+                @include w1024
+                    font-size: 20px
+            img
+                margin-right: 0.5em
+                width: 1.2em
+                @include w1024
+                    width: 24px
+    .legal
+        margin: 0 auto
+        width: 95%
+        border-top: 1px solid rgba(255,255,255,0.3)
+        padding: 0.3em
+        display: flex
+        flex-direction: row
+        justify-content: center
+        @include w1024
+            max-width: 1024px
+        p
+            font-size: 3.4vw
+            @include w1024
+                font-size: 16px
+//}}}
