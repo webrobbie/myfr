@@ -56,7 +56,7 @@ def blog_cn():
 @app.route('/fr/blog')
 def blog_fr():
     return render_template('blog/blog_fr.html')
-@app.route('/fr/blog/vowels')
-def vowels():
-    return render_template('blog/vowels_fr.html')
+# @app.route('/fr/blog/vowels')
+# def vowels():
+    # return render_template('blog/vowels_fr.html')
 #}}}
