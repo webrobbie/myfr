@@ -144,9 +144,10 @@ header nav.blog div.center {
 header nav.blog div.center ul.primary-menu {
   display: flex;
   flex-direction: row;
-  padding-left: 0;
+  padding: 0;
 }
 header nav.blog div.center ul.primary-menu li {
+  padding: 0;
   list-style: none;
 }
 header nav.blog div.center ul.primary-menu li a {

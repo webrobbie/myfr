@@ -1,0 +1,17 @@
+{% extends 'layout_fr.html' %}
+{% block title %}Blog{% endblock %}
+{% block description %}Voici nos articles sur la France et le français.{% endblock %}
+{% block url_cn %}{{ url_for("blog_cn") }}{% endblock %}
+{% block url_en %}{{ url_for("blog_en") }}{% endblock %}
+{% block optional_nav %}{% include 'blog/nav_fr.html' %}{% endblock %}
+
+{% block main %}
+<main class='blog'>
+	<div class='blog-card'>
+		<article class='card-body'>
+			<h1>Bonjour</h1>
+			<p class='center'>Page en construction. Encore un peu de patience, merci !</p>
+		</article>
+	</div>
+</main>
+{% endblock %}
