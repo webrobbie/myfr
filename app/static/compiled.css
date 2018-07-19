@@ -36,7 +36,7 @@ body {
   font-family: geo, sans-serif;
 }
 body.chinese * {
-  font-family: "Source-Han-Ligh1233a777081c480", geo, sans-serif;
+  font-family: "Source-Han-Ligh1356a5a3841c480", geo, sans-serif;
 }
 @media (orientation: landscape) and (min-width: 1921px) {
   body {
